@@ -6,20 +6,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProjectPrevComponent } from './project-prev/project-prev.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { ProjectCardComponent } from './project-prev/project-card/project-card.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectPrevComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ProjectCardComponent,
+    ProjectDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      { path : 'home', component: ProjectPrevComponent},
-      { path : '', redirectTo: 'home', pathMatch: 'full'},
-      { path : '**', redirectTo: 'home', pathMatch: 'full'}
+      { path : 'aboutme', component: AboutMeComponent},
+      { path : 'projects', component: ProjectPrevComponent},
+      { path : 'project/:id', component: ProjectDetailsComponent},
+      { path : '', redirectTo: 'aboutme', pathMatch: 'full'},
+      { path : '**', redirectTo: 'aboutme', pathMatch: 'full'}
   ]),
   ],
   providers: [],

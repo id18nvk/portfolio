@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IProject } from './project';
+import { ProjectService } from './project.service';
+
 
 @Component({
   selector: 'app-project-prev',
@@ -7,11 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectPrevComponent implements OnInit {
 
-  ProjectData: any;
+  projects: IProject[] = [];
 
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit(): void {
+    this.projects = this.projectService.getProducts();
   }
 
 }

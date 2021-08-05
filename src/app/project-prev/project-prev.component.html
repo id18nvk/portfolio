@@ -1,14 +1,4 @@
-
-<div class='card'>
-  <div class='card-header'>
-    Project title
-  </div>
-  <div class = 'card-body'>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur quisquam sit cupiditate deserunt, at ipsum temporibus voluptate atque recusandae earum ad! Asperiores similique molestias harum eaque veritatis, accusantium eveniet minima maiores cumque totam nemo recusandae repellat ea voluptatum assumenda provident amet nulla minus quibusdam hic molestiae! Corrupti laudantium distinctio in deleniti dolore laboriosam, neque facilis, porro delectus fuga voluptatem rerum similique ad unde quibusdam molestiae debitis repellat tempore quia amet.
-  </div>
-  <div class = 'card-footer'>
-    <button class = 'btn btn-outline-secondary' style = 'width: 80px;'>
-      <i class = 'fa fa-chevron-left'></i> Back
-    </button>
-  </div>
+<div class="test">
+  <app-project-card  *ngFor='let project of projects' [title] = 'project.projectTitle' [id]= 'project.id' [image]='project.imageUrl'></app-project-card>
 </div>
+

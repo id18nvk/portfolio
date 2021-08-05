@@ -1,11 +1,6 @@
-.carad {
-    display: block;
-    border-radius: 25px;
-    width: 10em;
-    height: 15em;
-    background-color: lightgrey;
-    padding: 1em;
-    p {
-        align-items: center;
-    }
+.test{
+  margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
